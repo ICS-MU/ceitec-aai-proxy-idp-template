@@ -130,11 +130,11 @@ if($onLoad !== '') {
 	
 	<div id="header">
 		<img src="<?php echo SimpleSAML_Module::getModuleUrl('ceitec/res/img/logo_512.png'); ?>" alt="CEITEC logo">
-		<h1><a class="header-link" href="/<?php echo $this->data['baseurlpath']; ?>">
+		<h1>
 		<?php 
 			echo (isset($this->data['header']) ? $this->data['header'] : 'CEITEC proxy IdP');
 		?>
-		</a></h1>
+		</h1>
 	</div>
 
 	
