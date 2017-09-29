@@ -21,7 +21,7 @@ if(!empty($this->data['htmlinject']['htmlContentPost'])) {
 			&nbsp; &nbsp; +420 549 498 732 &nbsp;
 			<a href="mailto:is.ceitec@ceitec.cz">is.ceitec@ceitec.cz</a>
 		</p>
-		<p>Copyright © CEITEC 2017
+		<p>Copyright © CEITEC <?php echo date("Y"); ?>
 		</p>
 	</div>
     </div>
