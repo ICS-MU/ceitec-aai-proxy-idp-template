@@ -24,7 +24,7 @@ if (array_key_exists('pageid', $this->data)) {
 		'page' => $this->data['pageid']
 	);
 		
-	SimpleSAML_Module::callHooks('htmlinject', $hookinfo);	
+	SimpleSAML\Module::callHooks('htmlinject', $hookinfo);	
 }
 // - o - o - o - o - o - o - o - o - o - o - o - o -
 
@@ -97,8 +97,8 @@ if ($this->isLanguageRTL()) {
 }
 ?>
 
-        <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleUrl('ceitec/res/bootstrap/css/bootstrap.min.css'); ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleUrl('ceitec/res/css/ceitec.css'); ?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleUrl('ceitec/res/bootstrap/css/bootstrap.min.css'); ?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleUrl('ceitec/res/css/ceitec.css'); ?>" />
 	
 	<meta name="robots" content="noindex, nofollow" />
 	
@@ -129,7 +129,7 @@ if($onLoad !== '') {
 <div id="wrap">
 	
 	<div id="header">
-		<img src="<?php echo SimpleSAML_Module::getModuleUrl('ceitec/res/img/logo_512.png'); ?>" alt="CEITEC logo">
+		<img src="<?php echo SimpleSAML\Module::getModuleUrl('ceitec/res/img/logo_512.png'); ?>" alt="CEITEC logo">
 		<h1>
 		<?php 
 			echo (isset($this->data['header']) ? $this->data['header'] : 'CEITEC proxy IdP');

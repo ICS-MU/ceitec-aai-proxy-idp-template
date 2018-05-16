@@ -13,7 +13,7 @@ if(!empty($this->data['htmlinject']['htmlContentPost'])) {
     <div style="margin: 0px auto; max-width: 1000px;">
 
 	<div style="float: left;">
-		<img src="<?php echo SimpleSAML_Module::getModuleUrl('ceitec/res/img/logo_64.png') ?>">
+		<img src="<?php echo SimpleSAML\Module::getModuleUrl('ceitec/res/img/logo_64.png') ?>">
 	</div>
 	
 	<div style="float: left;">
