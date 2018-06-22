@@ -95,15 +95,14 @@ echo '</div>';
 echo '<br>';
 echo '<br>';
 
-if (!$this->isAddInstitutionApp()) {
-	echo '<div class="no-idp-found alert alert-info">';
-	if ($this->isOriginalSpNonFilteringIdPs()) {
-		echo  $this->t('{ceitec:ceitec:find_institution_contact}')  . ' <a href="mailto:idm@ics.muni.cz?subject=Request%20for%20adding%20new%20IdP">idm@ics.muni.cz</a>';
-	} else {
-		echo $this->t('{ceitec:ceitec:find_institution_extended}') . ' <a class="btn btn-primary" href="https://login.ceitec.cz/add-institution/">add your institution</a>';
-	}
-	echo '</div>';
+echo '<div class="no-idp-found alert alert-info">';
+if ($this->isOriginalSpNonFilteringIdPs() || $this->isAddInstitutionApp()) {
+    echo  $this->t('{ceitec:ceitec:find_institution_contact}')  . ' <a href="mailto:idm@ics.muni.cz?subject=Request%20for%20adding%20new%20IdP">idm@ics.muni.cz</a>';
+} else {
+    echo $this->t('{ceitec:ceitec:find_institution_extended}') . ' <a class="btn btn-primary" href="https://login.ceitec.cz/add-institution/">add your institution</a>';
 }
+echo '</div>';
+
 
 $this->includeAtTemplateBase('includes/footer.php');
 
