@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 [Changed]
 - Filling email is now required for reporting error
 - Error reporting now uses dictionary
+- Fixed the sentence below the list of all IdPs in addInstitutionApp
 
 ## [v1.1.0]
 [Added]
