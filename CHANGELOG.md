@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+[Changed]
+- Filling email is now required for reporting error
+- Error reporting now uses dictionary
 
 ## [v1.1.0]
 [Added]
