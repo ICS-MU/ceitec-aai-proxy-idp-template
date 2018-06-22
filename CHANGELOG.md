@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [v1.1.1]
 [Changed]
 - Filling email is now required for reporting error
 - Error reporting now uses dictionary
@@ -19,5 +21,6 @@ All notable changes to this project will be documented in this file.
 - Changelog
 
 [Unreleased]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/master
+[v1.1.1]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.1.1
 [v1.1.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.1.0
 [v1.0.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.0.0
