@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 [Added]
 - Possibility to show a warning in disco-tpl
 
+[Changed]
+- Whole module now uses a dictionary
+
 ## [v1.1.1]
 [Changed]
 - Filling email is now required for reporting error
