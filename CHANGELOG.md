@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+[Added]
+- Possibility to show a warning in disco-tpl
 
 ## [v1.1.1]
 [Changed]
