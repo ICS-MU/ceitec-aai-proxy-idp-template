@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 [Changed]
 - Whole module now uses a dictionary
+- Updated Readme
 
 ## [v1.1.1]
 [Changed]
