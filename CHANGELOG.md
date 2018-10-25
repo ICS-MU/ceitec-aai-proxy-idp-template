@@ -9,6 +9,9 @@ All notable changes to this project will be documented in this file.
 - Whole module now uses a dictionary
 - Updated Readme
 
+[Removed]
+- Removed function present_attributes($t, $attributes, $nameParent) from consentform.php
+
 ## [v1.1.1]
 [Changed]
 - Filling email is now required for reporting error
