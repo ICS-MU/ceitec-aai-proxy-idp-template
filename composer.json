@@ -1,7 +1,7 @@
 {
     "name": "ics-mu/simplesamlphp-module-ceitec",
     "description": "A SimpleSAMLphp module providing template for DiscoPower and user-facing parts of the SSP for CEITEC",
-    "version": "1.2.0-dev",
+    "version": "1.3.0-dev",
     "type": "simplesamlphp-module",
     "keywords": ["CEITEC", "ceitec", "simplesamlphp"],
     "license": "BSD-2-Clause",
