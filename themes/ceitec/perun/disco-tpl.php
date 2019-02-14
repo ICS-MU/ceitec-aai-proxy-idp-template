@@ -162,7 +162,7 @@ if (!$warningIsOn || $warningUserCanContinue) {
     echo '<br>';
 
     echo '<div class="no-idp-found alert alert-info">';
-    if ($this->isOriginalSpNonFilteringIdPs() || $this->isAddInstitutionApp()) {
+    if ($this->isAddInstitutionApp()) {
         echo  $this->t('{ceitec:ceitec:find_institution_contact}')  . ' <a href="mailto:idm@ics.muni.cz?subject=Request%20for%20adding%20new%20IdP">idm@ics.muni.cz</a>';
     } else {
         echo $this->t('{ceitec:ceitec:find_institution_extended}') . ' <a class="btn btn-primary" href="https://login.ceitec.cz/add-institution/">' . $this->t('{ceitec:ceitec:add_institution_lower_case}') . '</a>';
