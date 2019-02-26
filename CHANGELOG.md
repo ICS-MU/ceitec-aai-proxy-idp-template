@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+[Changed]
+- Social Idps are not shown when adding institution
 
 ## [v1.2.0]
 [Added]
