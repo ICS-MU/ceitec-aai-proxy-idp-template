@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [v1.3.0]
 [Added]
 - Added support for pass selected IdP from SP in AuthnContextClassRef attribute.
     - It's required add this line into module_perun.php config file 
@@ -41,6 +43,7 @@ All notable changes to this project will be documented in this file.
 - Changelog
 
 [Unreleased]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/master
+[v1.3.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.3.0
 [v1.2.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.2.0
 [v1.1.1]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.1.1
 [v1.1.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.1.0
