@@ -36,6 +36,10 @@ const WARNING_USER_CAN_CONTINUE = 'userCanContinue';
 const WARNING_TITLE = 'title';
 const WARNING_TEXT = 'text';
 
+const PERUN_CONFIG_FILE_NAME = 'module_perun.php';
+const ADD_INSTITUTION_URL = 'disco.addInstitution.URL';
+const ADD_INSTITUTION_EMAIL = 'disco.addInstitution.email';
+
 const URN_CESNET_PROXYIDP_IDPENTITYID = "urn:cesnet:proxyidp:idpentityid:";
 
 $authContextClassRef = null;
@@ -45,18 +49,44 @@ $warningIsOn = false;
 $warningUserCanContinue = null;
 $warningTitle = null;
 $warningText = null;
-$config = null;
+$configWarning = null;
+
+$configPerun = null;
+$addInstitutionUrl = '';
+$addInstitutionEmail = '';
 
 try {
-    $config = Configuration::getConfig(WARNING_CONFIG_FILE_NAME);
-} catch (Exception $ex) {
+    $configWarning = Configuration::getConfig(WARNING_CONFIG_FILE_NAME);
+} catch (\Exception $ex) {
     Logger::warning("ceitec:disco-tpl: missing or invalid config-warning file");
 }
 
-if ($config != null) {
+try {
+    $configPerun = Configuration::getConfig(PERUN_CONFIG_FILE_NAME);
+} catch (\Exception $ex) {
+    Logger::warning("ceitec:disco-tpl: missing or invalid module_perun.php file");
+}
+
+if (!is_null($configPerun)) {
     try {
-        $warningIsOn = $config->getBoolean(WARNING_IS_ON);
-    } catch (Exception $ex) {
+        $addInstitutionUrl = $configPerun->getString(ADD_INSTITUTION_URL);
+    } catch (\Exception $ex) {
+        Logger::warning("ceitec:disco-tpl: missing or invalid addInstitution.URL parameter in module_perun.php file");
+    }
+}
+
+if (!is_null($configPerun)) {
+    try {
+        $addInstitutionEmail = $configPerun->getString(ADD_INSTITUTION_EMAIL);
+    } catch (\Exception $ex) {
+        Logger::warning("ceitec:disco-tpl: missing or invalid addInstitution.email parameter in module_perun.php file");
+    }
+}
+
+if ($configWarning != null) {
+    try {
+        $warningIsOn = $configWarning->getBoolean(WARNING_IS_ON);
+    } catch (\Exception $ex) {
         Logger::warning("ceitec:disco-tpl: missing or invalid isOn parameter in config-warning file");
         $warningIsOn = false;
     }
@@ -64,16 +94,16 @@ if ($config != null) {
 
 if ($warningIsOn) {
     try {
-        $warningUserCanContinue = $config->getBoolean(WARNING_USER_CAN_CONTINUE);
-    } catch (Exception $ex) {
+        $warningUserCanContinue = $configWarning->getBoolean(WARNING_USER_CAN_CONTINUE);
+    } catch (\Exception $ex) {
         Logger::warning(
             "ceitec:disco-tpl: missing or invalid userCanContinue parameter in config-warning file"
         );
         $warningUserCanContinue = true;
     }
     try {
-        $warningTitle = $config->getString(WARNING_TITLE);
-        $warningText = $config->getString(WARNING_TEXT);
+        $warningTitle = $configWarning->getString(WARNING_TITLE);
+        $warningText = $configWarning->getString(WARNING_TEXT);
         if (empty($warningTitle) || empty($warningText)) {
             throw new Exception();
         }
@@ -203,10 +233,10 @@ if (!$warningIsOn || $warningUserCanContinue) {
     echo '<div class="no-idp-found alert alert-info">';
     if ($this->isAddInstitutionApp()) {
         echo $this->t('{ceitec:ceitec:find_institution_contact}') .
-            ' <a href="mailto:idm@ics.muni.cz?subject=Request%20for%20adding%20new%20IdP">idm@ics.muni.cz</a>';
+            ' <a href="mailto:' . $addInstitutionEmail . '?subject=Request%20for%20adding%20new%20IdP">' . $addInstitutionEmail . '</a>';
     } else {
         echo $this->t('{ceitec:ceitec:find_institution_extended}') .
-            ' <a class="btn btn-primary" href="https://login.ceitec.cz/add-institution/">' .
+            ' <a class="btn btn-primary" href="' . $addInstitutionUrl . '">' .
             $this->t('{ceitec:ceitec:add_institution_lower_case}') . '</a>';
     }
     echo '</div>';
