@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 [Changed]
 - Changed code style to PSR-2
+- addInstitution URL and email in disco-tpl.php are loaded from a config file
 
 ## [v1.3.0]
 [Added]
