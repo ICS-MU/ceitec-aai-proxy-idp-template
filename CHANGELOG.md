@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [v2.0.0]
 [Added]
 - Added file phpcs.xml
 
@@ -50,6 +52,7 @@ All notable changes to this project will be documented in this file.
 - Changelog
 
 [Unreleased]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/master
+[v2.0.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v2.0.0
 [v1.3.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.3.0
 [v1.2.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.2.0
 [v1.1.1]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.1.1
