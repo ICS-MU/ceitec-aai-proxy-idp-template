@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+[Changed]
+- Removed warning template - it is no longer needed here because it was moved to module perun
 
 ## [v2.0.0]
 [Added]
