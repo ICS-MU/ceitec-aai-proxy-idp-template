@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 [Changed]
 - Removed warning template - it is no longer needed here because it was moved to module perun
 - Using of short array syntax
+- Remove requirements on module Peru
 
 ## [v2.0.0]
 [Added]
