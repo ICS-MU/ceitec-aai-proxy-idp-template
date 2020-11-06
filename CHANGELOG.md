@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [v2.1.0]
 [Changed]
 - Removed warning template - it is no longer needed here because it was moved to module perun
 - Using of short array syntax
@@ -56,6 +58,7 @@ All notable changes to this project will be documented in this file.
 - Changelog
 
 [Unreleased]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/master
+[v2.1.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v2.1.0
 [v2.0.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v2.0.0
 [v1.3.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.3.0
 [v1.2.0]: https://github.com/ICS-MU/ceitec-aai-proxy-idp-template/tree/v1.2.0
